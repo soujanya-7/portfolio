@@ -3,238 +3,417 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  <title>Creative Portfolio</title>
   <style>
-  
-
+    
     body {
-      font-family: 'Arial', sans-serif;
-      line-height: 1.6;
-      background: linear-gradient(135deg, #d26f6f, #c3cfe2);
-      color: #333;
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f3e6f2;
+      scroll-behavior: smooth;
+      background: url('https://img.freepik.com/premium-vector/aesthetic-minimal-purple-wallpaper-illustration-perfect-wallpaper-backdrop-postcard-background-your-design_565280-733.jpg?w=360')
+      background-
     }
 
-    h1, h2 {
-      margin-bottom: 15px;
+    header {
+      background-color: #c6a9d7; 
+      color: white;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      animation: slideInHeader 1s ease-out;
     }
 
-    a {
+    header nav {
+      display: flex;
+      justify-content: center;
+    }
+
+    header nav a {
+      color: white;
       text-decoration: none;
-      color: #007bff;
+      margin: 0 15px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      transition: color 0.3s ease, transform 0.3s ease;
     }
 
-    a:hover {
-      text-decoration: underline;
+    header nav a:hover {
+      color: #f3e6f2; 
+      text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.6);
     }
 
-   
-    .container {
+    section {
+      padding: 60px 20px;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 20px;
+      animation: fadeInSection 1.5s ease-out;
     }
 
-    
-    .header {
+    .container {
+      margin-bottom: 40px;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      animation: zoomIn 1.5s ease-out;
+    }
+
+    .container h1, .container h2 {
+      color: #6b5a4b;
       text-align: center;
-      padding: 50px 0;
+      animation: slideIn 1s ease-out;
     }
 
-    .header img {
-      width: 250px; 
-      height: 250px; 
-      object-fit: cover; 
-      border-radius: 50%;
-      border: 5px solid #fff;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    .container p, ul {
+      color: #4a4a4a;
+      animation: zoomIn 1.5s ease-out;
     }
 
-    .header h1 {
-      margin: 0px 0;
-      font-size: 2.5rem;
-      color: #333;
-    }
-
-    .header p {
-      font-size: 1.1rem;
-      color: #555;
-    }
-
-    /* Sections */
-    section {
-      margin: 50px 0;
-    }
-
-    section h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #444;
-    }
-
-    
-    .about {
-      text-align: center;
-    }
-
-    .about p {
-      max-width: 12000px;
-      margin: 0 auto;
-      font-size: 1.1rem;
-      color: #555;
-    }
-
-    
-    .projects {
+    #portfolio .container {
       display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 40px;
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1.5s ease-out;
     }
 
-    .project {
-      width: 300px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .project img {
-      width: 100%;
-      height: 200px;
+    .profile-picture {
+      width: 250px;
+      height: 250px;
       object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #e9e7df;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      animation: bounceIn 1s ease-out;
     }
 
-    .project h3 {
-      padding: 15px;
-      font-size: 1.5rem;
-      color: #333;
-    }
-
-    .project:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    
-    .skills {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-    }
-
-    .skill {
-      background: #fff;
-      padding: 10px 20px;
-      border-radius: 50px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      font-size: 1rem;
-      color: #333;
-    }
-
-    
-    .contact {
+    footer {
+      background-color: #c6a9d7;  
+      color: white;
       text-align: center;
+      padding: 20px 0;
+      animation: slideInFooter 1s ease-out;
     }
 
-    .contact p {
-      font-size: 1.1rem;
-      margin-bottom: 15px;
+    footer a {
+      color: #f8f5f2;
+      text-decoration: none;
     }
 
-    .contact a {
+    #contact {
+  background-color: #ffffff; 
+  padding: 30px; 
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 100px;
+}
+
+.contact-container h2 {
+  color: #6b5a4b;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.contact-container p {
+  color: #4a4a4a;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px; 
+  flex-wrap: wrap; 
+}
+
+.contact-link {
+  font-size: 1rem; 
+  color: white;
+  background-color: #c6a9d7;
+  text-decoration: none;
+  padding: 10px 20px; 
+  border-radius: 25px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.contact-link:hover {
+  background-color: #dac5e0;
+  transform: translateY(-3px);
+}
+
+    @keyframes fadeInSection {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(-100%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes bounceIn {
+      from {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInHeader {
+      from {
+        transform: translateY(-100%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInFooter {
+      from {
+        transform: translateY(100%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInSocialLinks {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    #certifications {
+   
+  padding: 60px 20px;
+  animation: fadeIn 1.5s ease-out;
+}
+
+#certifications .container {
+  text-align: center;
+}
+
+#certifications h1 {
+  color: #6b5a4b;
+}
+
+.certification {
+  padding: 20px;
+  margin: 15px;
+  border-radius: 10px;
+  display: inline-block;
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: transparent; 
+  box-shadow: none; 
+}
+
+
+.certification:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.certification h3 {
+  color: #6b5a4b;
+}
+
+.certification p {
+  color: #4a4a4a;
+}
+#certifications .button {
       display: inline-block;
       padding: 10px 20px;
-      background: #007bff;
-      color: #fff;
-      border-radius: 50px;
-      transition: background 0.3s;
+      background-color: #c6a9d7;
+      color: white;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
-    .contact a:hover {
-      background: #0056b3;
+    #certifications .button:hover {
+      background-color: #dac5e0;
+      transform: translateY(-3px);
     }
-    
-    @media (max-width: 600px) {
-      body{
-        background: linear-gradient(135deg, #6861d4, #c3cfe2);
-      }
-      .sidebar {
-        text-align: center;
-      }
-    }
-    
+
   </style>
 </head>
 <body>
+
+<header>
+  <nav>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#Projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="portfolio">
   <div class="container">
-   
-    <div class="header">
-      <img src="0799416C-6670-4ADA-A20D-222D5F8D03E0_1_105_c.jpeg" alt="Profile Picture">
-      <h1>SOUJANYA S</h1>
-      <p>Full Stack Developer | Content Designer | Innovator</p>
-    </div>
-
-   
-    <section class="about">
-      <h2>About Me</h2>
-      <p>
-        Hi, I'm <strong>Soujanya</strong>, a passionate and detail-oriented <strong>Progressive Web Developer</strong> dedicated to creating web experiences that are fast, reliable, and engaging. I specialize in crafting seamless applications that combine the power of modern web technologies with the feel of native apps.
-      </p>
-      <p>
-        With a strong foundation in <strong>HTML, CSS, JavaScript, Java</strong>, I strive to build solutions that bridge the gap between performance and usability. My expertise includes transforming ideas into functional, responsive, and scalable web apps while ensuring accessibility and user satisfaction.
-      </p>
-      <p>
-        When I'm not coding, you’ll find me exploring the latest advancements in web technology, contributing to open-source projects, or brainstorming creative ideas to improve user experiences.
-      </p>
-    </section>
-
-    
-    <section class="projects-section">
-      <h2>Projects</h2>
-      <div class="projects">
-        <div class="project">
-          <a href="insurance.html">
-            <img src="https://logolook.net/wp-content/uploads/2022/11/Java-Logo.png" alt="Project 1">
-            <h3>Insurance Management System</h3>
-          </a>
-        </div>
-        <div class="project">
-          <a href="budget tracking.html">
-            <img src="https://i.pinimg.com/originals/82/a2/18/82a2188c985ce75402ae44fc43fe7e5e.png" alt="Project 2">
-            <h3>Budget Tracking System</h3>
-          </a>
-        </div>
-        <div class="project">
-          <a href="airline.html">
-            <img src="https://w7.pngwing.com/pngs/724/306/png-transparent-c-logo-c-programming-language-icon-letter-c-blue-logo-computer-program-thumbnail.png" alt="Project 3">
-            <h3>Airline Management System</h3>
-          </a>
-        </div>
-      </div>
-    </section>
-
-   
-    <section class="skillset">
-      <h2>Skillset</h2>
-      <div class="skills">
-        <span class="skill">HTML</span>
-        <span class="skill">CSS</span>
-        <span class="skill">JavaScript</span>
-        <span class="skill">Java</span>
-        <span class="skill">Python</span>
-        <span class="skill">UI/UX Design</span>
-      </div>
-    </section>
-
-    
-    <section class="contact">
-      <h2>Contact Me</h2>
-      <p>Feel free to reach out to discuss projects or collaborations!</p>
-      <a href="mailto:ssoujanya20050807@gmail.com">Email Me</a>
-    </section>
+    <img src="854B4133-9B12-4AED-A95E-D36FEAA6335A_1_105_c.jpeg" alt="Profile Picture" class="profile-picture">
+    <h1>Soujanya S</h1>
+    <p>
+      Hi, I'm <strong>Soujanya</strong>, a passionate and detail-oriented <strong>Progressive Web Developer</strong> dedicated to creating web experiences that are fast, reliable, and engaging.
+    </p>
+    <p>
+      With a strong foundation in <strong>HTML, CSS, JavaScript, Java</strong>, I strive to build solutions that bridge the gap between performance and usability.
+    </p>
   </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <h1>Projects</h1>
+
+    <h2>Airline Management System</h2>
+    <p>
+      The Airline Management System handles booking, flight schedules, and passenger information, providing a seamless experience for both customers and staff.
+    </p>
+    <ul>
+      <li>Flight Booking & Reservations</li>
+      <li>Seat Selection & Cancellation</li>
+      <li>Customer Management</li>
+      <li>Admin Dashboard for Flight Schedules</li>
+      <li>Payment Integration</li>
+    </ul>
+
+    <h2>Budget Tracking System</h2>
+    <p>
+      A tool to manage personal finances effectively by tracking income, expenses, and budgets. Includes real-time tracking and graphical expense representations.
+    </p>
+    <ul>
+      <li>Track Income and Expenses</li>
+      <li>Set Monthly Budgets</li>
+      <li>Generate Graphical Reports</li>
+      <li>View Expense Categories</li>
+      <li>Real-Time Budget Monitoring</li>
+    </ul>
+
+    <h2>Insurance Management System</h2>
+    <p>
+      A tool to manage health and life insurance policies, including purchases, renewals, and claim tracking, with a secure and user-friendly interface.
+    </p>
+    <ul>
+      <li>Policy Management (Health, Life Insurance)</li>
+      <li>Online Policy Purchase</li>
+      <li>Policy Renewal Notifications</li>
+      <li>Claim Management</li>
+      <li>User Authentication and Security</li>
+    </ul>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <h1>Skills</h1>
+    <div class="skills-category">
+      <h2><i class="icon"></i> Technical Skills</h2>
+      <ul>
+        <li><strong>Programming Languages:</strong> Java, Python, C, JavaScript (Basics)</li>
+        <li><strong>Libraries:</strong> NumPy, Pandas, Matplotlib</li>
+        <li><strong>Web Technologies:</strong> HTML, CSS, JavaScript, SDLC, Blender</li>
+        <li><strong>Mobile App Development:</strong> Native/Hybrid iOS & Android Apps</li>
+      </ul>
+    </div>
+    <div class="skills-category">
+      <h2><i class="icon"></i> Design & Tools</h2>
+      <ul>
+        <li><strong>Tools/Platforms:</strong> GitHub, Canva, VS Code</li>
+        <li><strong>UI/UX Tools:</strong> Figma, Adobe XD</li>
+        <li><strong>Video Editing:</strong> Adobe Premiere Pro, DaVinci Resolve</li>
+      </ul>
+    </div>
+    <div class="skills-category">
+      <h2><i class="icon"></i> Databases</h2>
+      <ul>
+        <li><strong>Relational Databases:</strong> MySQL</li>
+        <li><strong>NoSQL Databases:</strong> MongoDB</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<section id="certifications">
+  <div class="container">
+    <h1>Certifications</h1>
+    <div class="certification">
+      <h3>Data Structure Algorithm DSA</h3>
+      <p>Udemy - Completed in 2024</p>
+      <a href="UC-50bda039-206f-4a5c-9f52-b4d1940588a0-11.pdf" class="button" target="_blank">View Certification</a>
+    </div>
+    <div class="certification">
+      <h3>Mastering Data Structure & Algorithms using C and C++</h3>
+      <p>Udemy - Completed in 2024</p>
+      <a href="UC-8d075b7f-9f2e-4e5a-b681-ddc8eaefc7a1-8.pdf" class="button" target="_blank">View Certification</a>
+    </div>
+    <div class="certification">
+      <h3>Java Programming</h3>
+      <p>Great Learning - Completed in 2024</p>
+      <a href="Soujanya S-3.pdf" class="button" target="_blank">View Certification</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-container">
+    <h2>Contact Me</h2>
+    <p>Let's connect and collaborate!</p>
+    <div class="contact-links">
+      <a href="https://linkedin.com" target="_blank" class="contact-link">LinkedIn</a>
+      <a href="mailto:ssoujanya20050807@gmail.com" class="contact-link">Email</a>
+      <a href="https://github.com" target="_blank" class="contact-link">GitHub</a>
+    </div>
+  </div>
+</section>
+<footer>
+  <p>&copy; 2025 Soujanya S. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
